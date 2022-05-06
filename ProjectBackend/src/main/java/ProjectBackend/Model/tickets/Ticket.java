@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Document("tickets")
 public class Ticket {
-    private int trainRouteID;
+    private Integer trainRouteID;
     private String startingStation;
     private String endingStation;
     private Discount discount;
@@ -15,10 +15,10 @@ public class Ticket {
     private String travelerName;
     private String travelerSurname;
     private String travelerEmail;
-    private int userId;
+    private Integer userId;
 
 
-    public Ticket(int trainRouteID, String startingStation, String endingStation, Discount discount, Date ticketDate, String travelerName, String travelerSurname, String travelerEmail, int userId) {
+    public Ticket(Integer trainRouteID, String startingStation, String endingStation, Discount discount, Date ticketDate, String travelerName, String travelerSurname, String travelerEmail, Integer userId) {
         this.trainRouteID = trainRouteID;
         this.startingStation = startingStation;
         this.endingStation = endingStation;
@@ -30,11 +30,11 @@ public class Ticket {
         this.userId = userId;
     }
 
-    public int getTrainRouteID() {
+    public Integer getTrainRouteID() {
         return trainRouteID;
     }
 
-    public void setTrainRouteID(int trainRouteID) {
+    public void setTrainRouteID(Integer trainRouteID) {
         this.trainRouteID = trainRouteID;
     }
 
@@ -94,11 +94,11 @@ public class Ticket {
         this.travelerEmail = travelerEmail;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 }
