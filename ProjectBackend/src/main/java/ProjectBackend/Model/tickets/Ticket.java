@@ -18,6 +18,19 @@ public class Ticket {
     private String travelerEmail;
     private int userId;
 
+    public Ticket(int trainRouteID, String startingStation, String endingStation, BigDecimal price, BigDecimal discount, Date ticketDate, String travelerName, String travelerSurname, String travelerEmail, int userId) {
+        this.trainRouteID = trainRouteID;
+        this.startingStation = startingStation;
+        this.endingStation = endingStation;
+        this.price = price;
+        this.discount = discount;
+        this.ticketDate = ticketDate;
+        this.travelerName = travelerName;
+        this.travelerSurname = travelerSurname;
+        this.travelerEmail = travelerEmail;
+        this.userId = userId;
+    }
+
     public int getTrainRouteID() {
         return trainRouteID;
     }
