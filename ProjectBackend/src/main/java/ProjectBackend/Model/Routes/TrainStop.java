@@ -1,13 +1,14 @@
 package ProjectBackend.Model.Routes;
 
-import java.time.LocalTime;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 public class TrainStop {
     private String stationName;
-    private LocalTime arrivalTime;
-    private LocalTime departureTime;
+    private String arrivalTime;
+    private String departureTime;
 
-    public TrainStop(String stationName, LocalTime arrivalTime, LocalTime departureTime) {
+    public TrainStop(String stationName, String arrivalTime, String departureTime) {
         this.stationName = stationName;
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
@@ -21,19 +22,19 @@ public class TrainStop {
         this.stationName = stationName;
     }
 
-    public LocalTime getArrivalTime() {
+    public String getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalTime arrivalTime) {
+    public void setArrivalTime(String arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
-    public LocalTime getDepartureTime() {
+    public String getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalTime departureTime) {
+    public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
 }

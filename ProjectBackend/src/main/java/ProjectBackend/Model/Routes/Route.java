@@ -1,14 +1,17 @@
 package ProjectBackend.Model.Routes;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 import java.util.Date;
 
+@Document("Routes")
 public class Route {
     private Date travelDate;
-    private ArrayList<TrainStop> trainStops;
+    public ArrayList<TrainStop> trainStops;
     private Train train;
-    private ArrayList<Integer> takenCompartmentSeats;
-    private ArrayList<Integer> takenNonCompartmentSeats;
+    public ArrayList<Integer> takenCompartmentSeats;
+    public ArrayList<Integer> takenNonCompartmentSeats;
 
     public Route(Date travelDate, ArrayList<TrainStop> trainStops, Train train, ArrayList<Integer> takenCompartmentSeats, ArrayList<Integer> takenNonCompartmentSeats) {
         this.travelDate = travelDate;
@@ -17,6 +20,7 @@ public class Route {
         this.takenCompartmentSeats = takenCompartmentSeats;
         this.takenNonCompartmentSeats = takenNonCompartmentSeats;
     }
+
 
     public Date getTravelDate() {
         return travelDate;
