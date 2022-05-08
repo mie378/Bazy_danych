@@ -1,12 +1,9 @@
 package ProjectBackend.data.routes;
 
-import ProjectBackend.Model.Routes.FoundRoute;
 import ProjectBackend.Model.Routes.Route;
 import ProjectBackend.Model.Routes.RouteFinderParams;
 import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -19,6 +16,6 @@ public interface RoutesRepository extends MongoRepository<Route ,String> {
             "{$match:{'$expr':{'$ne':['$departureTime',null]}}}",
             "{$match:{'$expr':{'ne':['$arrivalTime',null]}}}"
             })
-    public List<RouteFinderParams> getRoutes(String startingCity, String endingCity, String departureTime);
+    List<RouteFinderParams> getRoutes(String startingCity, String endingCity, String departureTime);
 
 }

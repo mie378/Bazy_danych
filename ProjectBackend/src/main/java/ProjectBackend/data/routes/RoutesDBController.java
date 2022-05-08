@@ -1,6 +1,5 @@
 package ProjectBackend.data.routes;
 
-import ProjectBackend.Model.Routes.FoundRoute;
 import ProjectBackend.Model.Routes.Route;
 import ProjectBackend.Model.Routes.RouteFinderParams;
 import org.springframework.context.annotation.Configuration;

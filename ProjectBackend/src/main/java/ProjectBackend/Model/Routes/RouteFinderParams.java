@@ -2,7 +2,7 @@ package ProjectBackend.Model.Routes;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.sql.Date;
 
 
 @Document("Routes")
@@ -60,5 +60,16 @@ public class RouteFinderParams {
 
     public void setTravelDate(Date travelDate) {
         this.travelDate = travelDate;
+    }
+
+    @Override
+    public String toString() {
+        return "RouteFinderParams{" +
+                "firstStation='" + firstStation + '\'' +
+                ", lastStation='" + lastStation + '\'' +
+                ", departureTime='" + departureTime + '\'' +
+                ", arrivalTime='" + arrivalTime + '\'' +
+                ", travelDate=" + travelDate +
+                '}';
     }
 }
