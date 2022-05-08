@@ -13,7 +13,7 @@ public class RoutesDBController {
     private RoutesRepository routesRepository;
 
 
-    public RoutesDBController(RoutesRepository routesRepository, RoutesFinder routesFinder) {
+    public RoutesDBController(RoutesRepository routesRepository) {
         this.routesRepository = routesRepository;
     }
 
