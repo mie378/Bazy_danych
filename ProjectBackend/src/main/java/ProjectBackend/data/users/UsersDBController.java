@@ -19,16 +19,11 @@ public class UsersDBController {
         this.userRepository.save(user);
         return true;
     }
-    public String login(String username, String password){
+    public boolean login(String username, String password){
         List<User> users=this.userRepository.findByUsername(username);
         if(users.size()==0){
-            return "USERNAME NOT FOUND";
+            return false;
         }
-        if(users.get(0).password.equals(password)){
-            return "LOGIN OK";
-        }
-        else{
-            return "WRONG PASSWORD";
-        }
+        return users.get(0).password.equals(password);
     }
 }

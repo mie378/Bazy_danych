@@ -16,9 +16,6 @@ public class User {
     @Column(name="password")
     public String password;
 
-    @Column(name="key")
-    public String key;
-
     @Column(name="firstName")
     public String firstName;
 
@@ -40,11 +37,14 @@ public class User {
     @Column(name="address")
     public String address;
 
+    public User(){
+
+    }
+
     public User(Integer userID, String username, String password, String key, String firstName, String lastName, String email, String city, String country, String zip, String address) {
         this.userID = userID;
         this.username = username;
         this.password = password;
-        this.key = key;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -76,14 +76,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 
     public String getFirstName() {
@@ -140,5 +132,21 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", zip='" + zip + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
